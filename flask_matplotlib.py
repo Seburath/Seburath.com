@@ -1,5 +1,3 @@
-from flask import Flask, render_template
-
 import io
 import random
 from flask import Flask, Response, request
@@ -14,14 +12,8 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     num_x_points = int(request.args.get("num_x_points", 50))
-    x = 121
-    return render_template('index.html', x=x)
 
-@app.route("/lol")
-def lol():
-    return render_template('random.html')
-
-"""
+    return f"""
     <h1>Flask and Matplotlib</h1>
         <h2>Random data with {num_x_points} random points</h2>
             <form method=get action="/">
@@ -40,20 +32,11 @@ def lol():
             >
     """
 
-@app.route("/register", methods=['POST','GET'])
-def register():
-	if request.method=='POST':
-		x=request.form['x']
-
-		return render_template('index.html', x=x)
-	else:
-		return render_template('index.html', x=x)
-
-@app.route("/matplot-as-image-<int:x>.png")
-def plot_png(x=50):
+@app.route("/matplot-as-image-<int:num_x_points>.png")
+def plot_png(num_x_points=50):
     fig = Figure()
     axis = fig.add_subplot(1, 1, 1)
-    x_points = range(x)
+    x_points = range(num_x_points)
     axis.plot(x_points, [random.randint(1, 30) for x in x_points])
 
     output = io.BytesIO()
@@ -61,5 +44,20 @@ def plot_png(x=50):
     return Response(output.getvalue(), mimetype="image/png")
 
 
+@app.route("/matplot-as-image-<int:num_x_points>.svg")
+def plot_svg(num_x_points=50):
+    fig = Figure()
+    axis = fig.add_subplot(1, 1, 1)
+    x_points = range(num_x_points)
+    axis.plot(x_points, [random.randint(1, 30) for x in x_points])
+
+    output = io.BytesIO()
+    FigureCanvasSVG(fig).print_svg(output)
+    return Response(output.getvalue(), mimetype="image/svg+xml")
+
+
 if __name__ == "__main__":
+    #import webbrowser
+
+    #webbrowser.open("http://127.0.0.1:5000/")
     app.run(debug=True)
