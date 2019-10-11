@@ -1,14 +1,16 @@
-from flask import Flask, render_template
-
+from flask import Flask, render_template, jsonify
 import io
 import random
 from flask import Flask, Response, request
 from matplotlib.backends.backend_agg import FigureCanvasAgg
 from matplotlib.backends.backend_svg import FigureCanvasSVG
 from matplotlib.figure import Figure
-
+from yahoo import chartData
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 
 @app.route("/")
@@ -16,6 +18,12 @@ def index():
     num_x_points = int(request.args.get("num_x_points", 50))
     x = 121
     return render_template('index.html', x=x)
+
+@app.route('/ticker/<ticker>')
+@cross_origin()
+def dataPoints(ticker="AMZN"):
+    data = chartData(ticker)
+    return jsonify(data)
 
 @app.route("/lol")
 def lol():
