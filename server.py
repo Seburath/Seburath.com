@@ -5,7 +5,7 @@ from flask import Flask, Response, request
 from matplotlib.backends.backend_agg import FigureCanvasAgg
 from matplotlib.backends.backend_svg import FigureCanvasSVG
 from matplotlib.figure import Figure
-from yahoo import chartData
+from yahoo import chartData, stockToCSV
 from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
@@ -23,6 +23,20 @@ def index():
 @cross_origin()
 def dataPoints(ticker="AMZN"):
     data = chartData(ticker)
+    return jsonify(data)
+
+@app.route('/backtest/<ticker>')
+@cross_origin()
+def backtest(ticker="AMZN"):
+    from backtesting import execute_backtest
+    data = execute_backtest(ticker)
+    data['legends'] = []
+    data['values'] = []
+    for val in data['trades']:
+        parsed_data = val.replace('CREATE', '').split(', ')
+        data['legends'].append(parsed_data[0])
+        data['values'].append(parsed_data[1])
+    print(data)
     return jsonify(data)
 
 @app.route("/lol")
