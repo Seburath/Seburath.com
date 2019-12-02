@@ -3,9 +3,14 @@
 .btn-book {
     border-radius: 20px;
     border: 1px solid rgba(129,212,250 ,1);
-    color: rgba(33,33,33 ,0.6);
+    color: rgba(33,33,33 ,0.7);
 }
 
+
+.active-lang {
+    background-color: rgba(129,212,250 ,0.3);
+    color: rgba(33,33,33 ,0.9) !important;
+}
 
 .body {
     position: relative;
