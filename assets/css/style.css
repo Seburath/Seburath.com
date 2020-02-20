@@ -1,9 +1,13 @@
 .snetwork{
   color: white !important;
+  font-size: 28px;
+  margin: 8px;
 }
 
 .snetwork-black {
   color: black !important;
+  font-size: 28px;
+  margin: 8px;
 }
 
 .carousel.carousel-full-nagivation .left {
@@ -9065,23 +9069,22 @@ button:focus {
 
 .btn.btn-info {
   color: #fff;
-  background-color: #00bcd4;
-  border-color: #00bcd4;
-  box-shadow: 0 2px 2px 0 rgba(0, 188, 212, 0.14), 0 3px 1px -2px rgba(0, 188, 212, 0.2), 0 1px 5px 0 rgba(0, 188, 212, 0.12);
+  background-color: #444;
+  border-color: #444;
 }
 
 .btn.btn-info:hover {
   color: #fff;
-  background-color: #00aec5;
-  border-color: #008697;
+  background-color: #666;
+  border-color: #666;
 }
 
 .btn.btn-info:focus,
 .btn.btn-info.focus,
 .btn.btn-info:hover {
   color: #fff;
-  background-color: #00aec5;
-  border-color: #008697;
+  background-color: #666;
+  border-color: #666;
 }
 
 .btn.btn-info:active,
@@ -9089,9 +9092,8 @@ button:focus {
 .open>.btn.btn-info.dropdown-toggle,
 .show>.btn.btn-info.dropdown-toggle {
   color: #fff;
-  background-color: #00aec5;
-  border-color: #008697;
-  box-shadow: 0 2px 2px 0 rgba(0, 188, 212, 0.14), 0 3px 1px -2px rgba(0, 188, 212, 0.2), 0 1px 5px 0 rgba(0, 188, 212, 0.12);
+  background-color: #999;
+  border-color: #999;
 }
 
 .btn.btn-info:active:hover,
@@ -9137,7 +9139,6 @@ button:focus {
 .btn.btn-info:focus,
 .btn.btn-info:active,
 .btn.btn-info:hover {
-  box-shadow: 0 14px 26px -12px rgba(0, 188, 212, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 188, 212, 0.2);
 }
 
 .btn.btn-info.btn-link {
@@ -9157,7 +9158,6 @@ button:focus {
   color: #fff;
   background-color: #4caf50;
   border-color: #4caf50;
-  box-shadow: 0 2px 2px 0 rgba(76, 175, 80, 0.14), 0 3px 1px -2px rgba(76, 175, 80, 0.2), 0 1px 5px 0 rgba(76, 175, 80, 0.12);
 }
 
 .btn.btn-success:hover {
@@ -9181,7 +9181,6 @@ button:focus {
   color: #fff;
   background-color: #47a44b;
   border-color: #39843c;
-  box-shadow: 0 2px 2px 0 rgba(76, 175, 80, 0.14), 0 3px 1px -2px rgba(76, 175, 80, 0.2), 0 1px 5px 0 rgba(76, 175, 80, 0.12);
 }
 
 .btn.btn-success:active:hover,
@@ -9227,7 +9226,6 @@ button:focus {
 .btn.btn-success:focus,
 .btn.btn-success:active,
 .btn.btn-success:hover {
-  box-shadow: 0 14px 26px -12px rgba(76, 175, 80, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(76, 175, 80, 0.2);
 }
 
 .btn.btn-success.btn-link {
@@ -9247,7 +9245,6 @@ button:focus {
   color: #fff;
   background-color: #ff9800;
   border-color: #ff9800;
-  box-shadow: 0 2px 2px 0 rgba(255, 152, 0, 0.14), 0 3px 1px -2px rgba(255, 152, 0, 0.2), 0 1px 5px 0 rgba(255, 152, 0, 0.12);
 }
 
 .btn.btn-warning:hover {
@@ -9271,7 +9268,6 @@ button:focus {
   color: #fff;
   background-color: #f08f00;
   border-color: #c27400;
-  box-shadow: 0 2px 2px 0 rgba(255, 152, 0, 0.14), 0 3px 1px -2px rgba(255, 152, 0, 0.2), 0 1px 5px 0 rgba(255, 152, 0, 0.12);
 }
 
 .btn.btn-warning:active:hover,
@@ -9317,7 +9313,6 @@ button:focus {
 .btn.btn-warning:focus,
 .btn.btn-warning:active,
 .btn.btn-warning:hover {
-  box-shadow: 0 14px 26px -12px rgba(255, 152, 0, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(255, 152, 0, 0.2);
 }
 
 .btn.btn-warning.btn-link {
@@ -9337,7 +9332,6 @@ button:focus {
   color: #fff;
   background-color: #f44336;
   border-color: #f44336;
-  box-shadow: 0 2px 2px 0 rgba(244, 67, 54, 0.14), 0 3px 1px -2px rgba(244, 67, 54, 0.2), 0 1px 5px 0 rgba(244, 67, 54, 0.12);
 }
 
 .btn.btn-danger:hover {
@@ -9361,7 +9355,6 @@ button:focus {
   color: #fff;
   background-color: #f33527;
   border-color: #e11b0c;
-  box-shadow: 0 2px 2px 0 rgba(244, 67, 54, 0.14), 0 3px 1px -2px rgba(244, 67, 54, 0.2), 0 1px 5px 0 rgba(244, 67, 54, 0.12);
 }
 
 .btn.btn-danger:active:hover,
@@ -9407,7 +9400,6 @@ button:focus {
 .btn.btn-danger:focus,
 .btn.btn-danger:active,
 .btn.btn-danger:hover {
-  box-shadow: 0 14px 26px -12px rgba(244, 67, 54, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(244, 67, 54, 0.2);
 }
 
 .btn.btn-danger.btn-link {
@@ -11337,7 +11329,7 @@ label {
 }
 
 .social-buttons-demo .btn {
-  margin: 10px 5px 7px 1px;
+  margin: 20px 10px 14px 2px;
 }
 
 .img-container {
@@ -13965,14 +13957,14 @@ textarea {
   padding: 0.625rem 0;
   margin-bottom: 20px;
   color: #555;
-  background-color: #fff !important;
+  background-color: #222 !important;
   box-shadow: 0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15);
 }
 
 .navbar .dropdown-item:hover,
 .navbar .dropdown-item:focus {
   box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(255, 255, 255, 0.4);
-  background-color: #fff;
+  background-color: #222;
   color: #555;
 }
 
@@ -16510,7 +16502,7 @@ footer .pull-center {
 }
 
 .card .card-category-social .fa {
-  font-size: 24px;
+  font-size: 44px;
   position: relative;
   margin-top: -4px;
   top: 2px;
